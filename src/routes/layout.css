@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+/* Use Inter as the primary font */
+body {
+	font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/*
+  content-visibility: auto — tells the browser it can skip rendering
+  sections that are off-screen, improving initial paint time.
+  Apply to every major below-fold section.
+*/
+.cv-auto {
+	content-visibility: auto;
+	contain-intrinsic-size: 0 400px; /* prevents layout shift during lazy render */
+}
+
+/*
+  Reduce motion for users who prefer it — removes all
+  transitions/animations at the OS level.
+*/
+@media (prefers-reduced-motion: reduce) {
+	*,
+	::before,
+	::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
