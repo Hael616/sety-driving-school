@@ -13,14 +13,7 @@
 		</p>
 		<div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
 			<Button variant="outline" size="lg">
-				<a
-					href="https://wa.me/2347033233038?text=Hello,%20I'd%20like%20to%20book%20driving%20lessons."
-					target="_blank"
-					rel="noopener noreferrer"
-					class="flex items-center gap-2"
-				>
-					See Our Plans
-				</a>
+				<a href="/pricing" class="flex items-center gap-2"> See Our Plans </a>
 			</Button>
 			<Button variant="outline" size="lg">
 				<a href="/gallery" class="flex items-center gap-2"> View Our Fleet </a>
