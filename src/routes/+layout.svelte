@@ -4,6 +4,7 @@
 	import Navbar from '$lib/components/layout/Navbar.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import AreasServed from '$lib/components/layout/AreasServed.svelte';
+	import PinnedSchedule from '$lib/components/layout/PinnedSchedule.svelte';
 
 	let { children } = $props();
 </script>
@@ -21,4 +22,5 @@
 	</main>
 	<AreasServed />
 	<Footer />
+	<PinnedSchedule />
 </div>

@@ -3,10 +3,10 @@ export const SITE_URL = 'https://www.setydrivingschool.com.ng';
 export const BUSINESS = {
 	name: 'Sety Driving School',
 	shortName: 'Sety Driving',
-	tagline: 'Expert Driving Lessons in Lekki, Lagos',
+	tagline: 'Driving Lessons in Lekki, Lagos',
 	phone: '+2347033233038',
 	whatsapp: '2347033233038',
-	email: 'info@setydrivingschool.com.ng',
+	email: 'contact@setydrivingschool.com.ng',
 	address: {
 		street: '58 Lekki - Epe Expy, Lekki Peninsula II',
 		city: 'Lagos',
@@ -26,7 +26,7 @@ export const BUSINESS = {
 		'Agungi',
 		'Jakande',
 		'Igbo Efon',
-		'Osapa London',
+		'Osapa',
 		'Chevron',
 		'Lekki Phase 1',
 		'Lekki Phase 2',

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/Button.svelte';
+	import { generateWhatsAppLink } from '$lib/utils/whatsapp';
 
 	interface Props {
 		title: string;
@@ -16,7 +17,10 @@
 			class="relative overflow-hidden rounded-3xl border border-green-400/20 bg-gradient-to-br from-green-500 to-green-700 px-6 py-16 text-center sm:px-12 sm:py-20"
 		>
 			<!-- Lightweight radial tint — no blur paint cost -->
-			<div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(255,255,255,0.08)_0%,_transparent_60%)]" aria-hidden="true"></div>
+			<div
+				class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(255,255,255,0.08)_0%,_transparent_60%)]"
+				aria-hidden="true"
+			></div>
 
 			<div class="relative z-10">
 				<h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -26,9 +30,9 @@
 					{description}
 				</p>
 				<div class="mt-10 flex justify-center">
-				<Button variant="white" size="lg" class="px-8">
+					<Button variant="white" size="lg" class="px-8">
 						<a
-							href="https://wa.me/2347033233038?text=Hello,%20I'd%20like%20to%20book%20driving%20lessons."
+							href={generateWhatsAppLink({ type: 'general' })}
 							target="_blank"
 							rel="noopener noreferrer"
 							class="flex items-center gap-2"

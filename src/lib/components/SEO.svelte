@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { SITE_URL, BUSINESS, DEFAULT_SEO, type PageSEO } from '$lib/seo';
+	import { page } from '$app/state';
 
 	interface Props extends Partial<PageSEO> {
 		/** Optional JSON-LD structured data object(s). Pass an array for multiple schemas. */
@@ -16,10 +17,22 @@
 		schema
 	}: Props = $props();
 
-	const canonicalUrl = canonical ?? SITE_URL;
-	const schemaJson = schema
-		? JSON.stringify(Array.isArray(schema) ? schema : [schema])
-		: null;
+	// Fallback to the current absolute page URL (ensuring no trailing slash for subpages, and matching www)
+	const canonicalUrl = $derived(
+		canonical ??
+			(() => {
+				let path: string = page.url.pathname;
+				if (path === '/') return SITE_URL;
+				if (path.endsWith('/')) {
+					path = path.slice(0, -1);
+				}
+				return `${SITE_URL}${path}`;
+			})()
+	);
+
+	const schemaJson = $derived(
+		schema ? JSON.stringify(Array.isArray(schema) ? schema : [schema]) : null
+	);
 </script>
 
 <svelte:head>

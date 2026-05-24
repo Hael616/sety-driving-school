@@ -34,6 +34,57 @@
 		}
 	];
 
+	const pricingData = [
+		{
+			name: '1 Week Refresher',
+			price: '45,000',
+			description:
+				'1-week intensive refresher driving program in Lagos for learners with prior experience needing quick defensive driving and practical reinforcement.',
+			features: [
+				'Intensive theory + simulator (first session)',
+				'Defensive driving training',
+				'Learner’s permit included'
+			],
+			ctaText: 'Choose 1 Week'
+		},
+		{
+			name: '2 Weeks Plan',
+			price: '90,000',
+			description:
+				'2-week structured driving program in Lagos for beginners and refreshers covering theory, simulator training, and practical driving.',
+			features: [
+				'Theory + simulator training',
+				'Defensive driving lessons',
+				'Learner’s permit included'
+			],
+			ctaText: 'Choose 2 Weeks'
+		},
+		{
+			name: '3 Weeks Beginner',
+			price: '120,000',
+			description:
+				'3-week beginner driving program in Lagos designed to build confidence through structured theory, simulator, and practical training.',
+			features: [
+				'Beginner driving curriculum',
+				'Theory + simulator sessions',
+				'Learner’s permit included'
+			],
+			ctaText: 'Choose 3 Weeks'
+		},
+		{
+			name: '4 Weeks Mastery',
+			price: '145,000',
+			description:
+				'4-week complete beginner program in Lagos for full driving mastery, road confidence, and defensive driving skills.',
+			features: [
+				'Full driving training program',
+				'Theory + simulator sessions',
+				'Learner’s permit included'
+			],
+			ctaText: 'Choose 4 Weeks'
+		}
+	];
+
 	const faqSchema = {
 		'@context': 'https://schema.org',
 		'@type': 'FAQPage',
@@ -63,48 +114,15 @@
 
 	<section class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
 		<div class="grid items-stretch gap-8 pt-4 md:grid-cols-3 lg:gap-12">
-			<PricingCard
-				name="Beginner"
-				price="100,000"
-				description="Perfect for complete beginners taking their first steps on Lagos roads."
-				features={[
-					'10 hours of practical driving',
-					'Air-conditioned, dual-controlled car',
-					'Traffic rules & theory',
-					'FRSC test guidance'
-				]}
-				ctaText="Choose Beginner"
-			/>
-
-			<PricingCard
-				name="Intermediate"
-				price="130,000"
-				description="Our most popular choice for consistent, steady progress and confidence building."
-				features={[
-					'20 hours of practical driving',
-					'Air-conditioned, dual-controlled car',
-					'Mock driving assessments',
-					'Priority lesson booking',
-					'Mainland/Island route practice'
-				]}
-				highlighted={true}
-				ctaText="Choose Intermediate"
-			/>
-
-			<PricingCard
-				name="Advanced"
-				price="200,000"
-				description="Comprehensive training to master Lagos traffic with maximum confidence."
-				features={[
-					'30 hours of practical driving',
-					'Air-conditioned, dual-controlled car',
-					'Extensive mock assessments',
-					'Expressway driving practice',
-					'Defensive driving techniques',
-					'Flexible premium scheduling'
-				]}
-				ctaText="Choose Advanced"
-			/>
+			{#each pricingData as price}
+				<PricingCard
+					name={price.name}
+					price={price.price}
+					description={price.description}
+					features={price.features}
+					ctaText={price.ctaText}
+				/>
+			{/each}
 		</div>
 	</section>
 

@@ -13,7 +13,7 @@
 		'@type': ['LocalBusiness', 'DrivingSchool'],
 		name: BUSINESS.name,
 		description:
-			'Professional driving lessons in Lekki, Ajah, Ikota, Agungi, Jakande, Igbo Efon and Osapa London. Learn to drive safely on Lagos roads with expert, patient instructors.',
+			'Professional driving lessons in Lekki, Ajah, Ikota, Agungi, Jakande, Igbo Efon and Osapa. Learn to drive safely on Lagos roads with expert, patient instructors.',
 		url: SITE_URL,
 		telephone: BUSINESS.phone,
 		email: BUSINESS.email,
@@ -66,23 +66,34 @@
 			itemListElement: [
 				{
 					'@type': 'Offer',
-					name: 'Beginner Driving Package',
-					description: '10 hours of practical driving lessons for complete beginners in Lekki, Lagos',
-					price: '100000',
+					name: 'Beginner Driving Lessons',
+					description:
+						'A complete 3-week beginner driving course in Lagos covering practical driving, defensive techniques, theoretical lessons, simulator training, and learner’s permit.',
+					price: '120000',
 					priceCurrency: 'NGN'
 				},
 				{
 					'@type': 'Offer',
-					name: 'Intermediate Driving Package',
-					description: '20 hours of driving lessons with mock assessments — most popular choice',
-					price: '130000',
+					name: 'Advanced Beginner Driving Lessons',
+					description:
+						'A complete 3-week beginner driving course in Lagos covering practical driving, defensive techniques, theoretical lessons, simulator training, and learner’s permit.',
+					price: '145000',
 					priceCurrency: 'NGN'
 				},
 				{
 					'@type': 'Offer',
-					name: 'Advanced Driving Package',
-					description: '30 hours of comprehensive driving training including expressway practice',
-					price: '200000',
+					name: 'Refresher Driving Lessons',
+					description:
+						'A 1-week intensive driving program in Lagos designed mainly for refresher learners who want fast-track practical and theoretical driving lessons, including simulator training and learner’s permit.',
+					price: '45000',
+					priceCurrency: 'NGN'
+				},
+				{
+					'@type': 'Offer',
+					name: 'Advanced Refresher Driving Lessons',
+					description:
+						'A 2-week driving course in Lagos for beginners and refresher students focused on defensive driving, practical road training, theory classes, simulator sessions, and learner’s permit.',
+					price: '90000',
 					priceCurrency: 'NGN'
 				}
 			]
@@ -91,7 +102,7 @@
 </script>
 
 <SEO
-	title="Sety Driving School – #1 Driving School in Lekki, Lagos"
+	title="Sety Driving School | Professional Driving Lessons in Lekki"
 	description="Looking for a driving school in Lekki, Ajah or Ikota? Sety Driving School offers expert driving lessons across Lagos with flexible schedules, modern cars & certified instructors. Book on WhatsApp today."
 	canonical={SITE_URL}
 	schema={localBusinessSchema}

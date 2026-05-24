@@ -15,7 +15,7 @@ export const GET: RequestHandler = () => {
 ${pages
 	.map(
 		(page) => `  <url>
-    <loc>${SITE_URL}${page.path}</loc>
+    <loc>${SITE_URL}${page.path === '/' ? '' : page.path}</loc>
     <lastmod>${now}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>

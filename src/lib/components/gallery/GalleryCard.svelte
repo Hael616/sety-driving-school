@@ -11,12 +11,23 @@
 		height?: number;
 	}
 
-	let { src, alt, caption, eager = false, width = 800, height = 533 }: Props = $props();
+	let { src, alt, caption, eager = false, width = 800, height = 600 }: Props = $props();
+
+	// Generate responsive srcset strings for WebP images dynamically
+	const getSrcset = (imageSrc: string) => {
+		if (!imageSrc.endsWith('.webp')) return undefined;
+		const base = imageSrc.substring(0, imageSrc.lastIndexOf('.'));
+		return `${base}-480w.webp 480w, ${base}-768w.webp 768w, ${base}-1024w.webp 1024w`;
+	};
+
+	const srcset = $derived(getSrcset(src));
 </script>
 
-<Card padding="none" class="group relative w-full overflow-hidden" style="aspect-ratio: 3/2;">
+<Card padding="none" class="group relative w-full overflow-hidden aspect-[4/3]">
 	<img
 		{src}
+		{srcset}
+		sizes="(max-width: 640px) 480px, (max-width: 1024px) 768px, 1024px"
 		{alt}
 		{width}
 		{height}
