@@ -23,8 +23,6 @@
 </section>
 
 <style>
-	/* Defined in CSS — avoids Tailwind parsing a long arbitrary-value radial-gradient
-	   at build time, and is more cache-friendly for the browser */
 	.hero-section {
 		background: radial-gradient(ellipse at top, #0f172a 0%, #020617 60%);
 	}

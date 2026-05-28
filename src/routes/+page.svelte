@@ -18,7 +18,7 @@
 		telephone: BUSINESS.phone,
 		email: BUSINESS.email,
 		image: `${SITE_URL}/og-image.jpg`,
-		logo: `${SITE_URL}/favicon.svg`,
+		logo: `${SITE_URL}/favicon.png`,
 		priceRange: '₦₦',
 		currenciesAccepted: 'NGN',
 		paymentAccepted: 'Cash, Bank Transfer',

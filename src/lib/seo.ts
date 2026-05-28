@@ -49,5 +49,5 @@ export const DEFAULT_SEO: PageSEO = {
 	description:
 		'Sety Driving School offers professional driving lessons in Lekki, Ajah, Ikota, Agungi and across Lagos. Expert instructors, modern cars, flexible schedules. Book via WhatsApp today.',
 	ogType: 'website',
-	ogImage: `${SITE_URL}/og-image.jpg`
+	ogImage: `${SITE_URL}/og-image.png`
 };

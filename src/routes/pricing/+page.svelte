@@ -101,8 +101,8 @@
 
 <SEO
 	title="Driving Lesson Prices in Lekki, Lagos – Sety Driving School"
-	description="Transparent driving lesson packages starting from ₦100,000 in Lekki, Lagos. No hidden fees. Serving Lekki, Ajah, Ikota, Agungi, Jakande & Igbo Efon. Book via WhatsApp."
-	canonical="{SITE_URL}/pricing"
+	description="Affordable driving lesson packages in Lagos for beginners and experienced drivers. Serving Lekki, Ajah, Ikota, Agungi, Jakande & Igbo Efon. Book via WhatsApp."
+	canonical={`${SITE_URL}/pricing`}
 	schema={faqSchema}
 />
 

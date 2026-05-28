@@ -47,7 +47,7 @@
 <SEO
 	title="Gallery – Sety Driving School in Lekki, Lagos"
 	description="See our students, instructors and modern driving fleet in action across Lekki, Ajah and Lagos. Real lessons, real results. Book your driving lesson today."
-	canonical="{SITE_URL}/gallery"
+	canonical={`${SITE_URL}/gallery`}
 />
 
 <div class="bg-slate-950">

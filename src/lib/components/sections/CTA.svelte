@@ -6,11 +6,10 @@
 <section class="py-20 sm:py-24">
 	<div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
 		<div
-			class="relative overflow-hidden rounded-3xl border border-green-400/20 bg-gradient-to-br from-green-500 to-green-700 px-6 py-16 text-center sm:px-12 sm:py-20"
+			class="relative overflow-hidden rounded-3xl border border-green-400/20 bg-linear-to-br from-green-500 to-green-700 px-6 py-16 text-center sm:px-12 sm:py-20"
 		>
-			<!-- Lightweight radial tint — no blur paint cost -->
 			<div
-				class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(255,255,255,0.08)_0%,_transparent_60%)]"
+				class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(255,255,255,0.08)_0%,transparent_60%)]"
 				aria-hidden="true"
 			></div>
 
